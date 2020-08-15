@@ -1,0 +1,36 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+option java_multiple_files = true;
+option java_package = "com.zh.proto";
+message Payload {
+    google.protobuf.Timestamp timestamp = 1;
+    string sent_by = 2;
+    google.protobuf.BytesValue sha256 = 3;
+    google.protobuf.StringValue file_name = 4;
+    google.protobuf.StringValue url = 5;
+}
+
+service ProducerService {
+    rpc Produce(Payload) returns (Response) {}
+
+    rpc ProduceList(PayloadList) returns (Response) {}
+}
+
+message PayloadList {
+    repeated Payload items = 1;
+}
+
+message Empty {
+}
+
+message Invalid {
+    repeated string messages = 1;
+}
+
+message Response {
+    oneof content {
+        Empty ok = 1;
+        Invalid invalid = 2;
+    }
+}
