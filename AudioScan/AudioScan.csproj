@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AudioScan.Common\AudioScan.Common.csproj" />
+    <ProjectReference Include="..\AudioScan.Settings\AudioScan.Settings.fsproj" />
+    <ProjectReference Include="..\AudioScan.Sql\AudioScan.Sql.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Settings.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

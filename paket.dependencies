@@ -1,0 +1,12 @@
+redirects: on
+framework: auto-detect
+source https://nuget.org/api/v2/
+nuget FSharp.Core
+nuget FSharp.Configuration 2.0.0-alpha2
+nuget System.Data.SqlClient
+nuget NLog
+nuget Akka
+nuget Akka.Streams
+nuget Akkling
+nuget Akkling.Streams
+nuget z440.atl.core

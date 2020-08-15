@@ -1,0 +1,15 @@
+﻿Logs:
+# Logging MinLevel. Will log messages where logLevel is above this value.
+# Supported values (min to max): Off, Trace, Debug, Info, Warn, Error, Fatal
+  MinLevel: Debug
+# Path to application logs directory
+  Directory: ""
+# # example values:
+  # c:\logs
+  # ${currentDir}\logs
+  # ${tempdir}\logs\your-service
+  # ${environment:variable=LOGS}\${appdomain:format={1\}}-v${assembly-version}  
+  # More info at https://nlog-project.org/config/?tab=layout-renderers
+Db:
+    ConnectionString: "Data Source=localhost,1433;Initial Catalog=Test;User ID=user;Password=changeit;"
+ScanDir: "R:\\media\\music"
