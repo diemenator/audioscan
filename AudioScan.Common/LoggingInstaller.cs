@@ -9,12 +9,12 @@ using NLog.Targets.Wrappers;
 
 namespace AudioScan.Common
 {
-    public sealed class LoggingConfig : LoggingConfiguration 
+    public sealed class LoggingConfig : LoggingConfiguration
     {
     }
-    
+
     public static class LoggingInstaller
-    {        
+    {
         public const string MinLevelConfigurationKey = "Log.MinLevel";
         public const string DirectoryConfigurationKey = "Log.Directory";
         public const string MaxArchiveFilesConfigurationKey = "Log.MaxArchiveFiles";
@@ -55,7 +55,7 @@ namespace AudioScan.Common
             return config;
         }
 
-        public static LoggingConfig  WriteToTrace(this LoggingConfig  configuration,
+        public static LoggingConfig WriteToTrace(this LoggingConfig configuration,
             string name = "trace",
             LogLevel minLevel = null, bool apply = true)
         {
@@ -77,7 +77,7 @@ namespace AudioScan.Common
             return configuration;
         }
 
-        public static LoggingConfig  WriteToConsole(this LoggingConfig  configuration,
+        public static LoggingConfig WriteToConsole(this LoggingConfig configuration,
             string name = "coloredConsole",
             LogLevel minLevel = null, bool apply = true)
         {
@@ -108,7 +108,7 @@ namespace AudioScan.Common
         /// <param name="minLevel"></param>
         /// <param name="apply"></param>
         /// <returns></returns>
-        public static LoggingConfig  WriteToFolder(this LoggingConfig  configuration, string path = null,
+        public static LoggingConfig WriteToFolder(this LoggingConfig configuration, string path = null,
             LogLevel minLevel = null, bool apply = true)
         {
             var resolvedPath = ResolveLogsPath(path);
@@ -155,7 +155,7 @@ namespace AudioScan.Common
             return (configuration as LoggingConfig) ?? new LoggingConfig();
         }
 
-        public static LoggingConfig  WriteToFile(this LoggingConfig configuration,
+        public static LoggingConfig WriteToFile(this LoggingConfig configuration,
             string name,
             string loggerNamePattern,
             string fileNamePrefix,
@@ -234,7 +234,7 @@ namespace AudioScan.Common
                 $"Using Explicit {MinLevelConfigurationKey} '{minLevel}' for target '{targetName}'.");
             return minLevel;
         }
-        
+
         public static string ResolveLogsPath(string path)
         {
             // use nlog layout renderer to get actual path
@@ -242,7 +242,8 @@ namespace AudioScan.Common
 
             if (string.IsNullOrEmpty(actualPath))
             {
-                Trace.TraceInformation($"Applying {DirectoryConfigurationKey} settings property from configuration/appSettings.");
+                Trace.TraceInformation(
+                    $"Applying {DirectoryConfigurationKey} settings property from configuration/appSettings.");
 
                 Trace.TraceInformation($"Configured {DirectoryConfigurationKey} is '{actualPath}'.");
             }

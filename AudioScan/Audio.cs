@@ -40,7 +40,8 @@ namespace AudioScan
                 {
                     var content = File.ReadAllBytes(filename);
                     result.Md5 = crypto.ComputeHash(content).ToInvariantByteString();
-                    result.PathMd5 = crypto.ComputeHash(Encoding.UTF8.GetBytes(result.Path.ToLowerInvariant())).ToInvariantByteString();
+                    result.PathMd5 = crypto.ComputeHash(Encoding.UTF8.GetBytes(result.Path.ToLowerInvariant()))
+                        .ToInvariantByteString();
                 }
 
                 var now = DateTime.UtcNow;
@@ -54,6 +55,5 @@ namespace AudioScan
                 return null;
             }
         }
-
     }
 }

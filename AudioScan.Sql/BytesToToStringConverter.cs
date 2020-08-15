@@ -5,9 +5,9 @@ namespace AudioScan.Sql
 {
     public class BytesToToStringConverter : IDbValueConverter
     {
-        public Type TargetType => typeof (string);
+        public Type TargetType => typeof(string);
 
-        public Type SourceType  => typeof (byte[]);
+        public Type SourceType => typeof(byte[]);
 
         public object Convert(object value)
         {
@@ -29,9 +29,9 @@ namespace AudioScan.Sql
 
     public class MillisToTimespanConverter : IDbValueConverter
     {
-        public Type TargetType => typeof (TimeSpan);
+        public Type TargetType => typeof(TimeSpan);
 
-        public Type SourceType  => typeof (long);
+        public Type SourceType => typeof(long);
 
         public object Convert(object value)
         {
@@ -40,7 +40,7 @@ namespace AudioScan.Sql
                 return null;
             }
 
-            var v = (long)value;
+            var v = (long) value;
 
             return TimeSpan.FromMilliseconds(v);
         }
@@ -48,9 +48,9 @@ namespace AudioScan.Sql
 
     public class TimespanToMillisConverter : IDbValueConverter
     {
-        public Type SourceType  => typeof (TimeSpan);
+        public Type SourceType => typeof(TimeSpan);
 
-        public Type TargetType => typeof (long);
+        public Type TargetType => typeof(long);
 
         public object Convert(object value)
         {
@@ -59,7 +59,7 @@ namespace AudioScan.Sql
                 return null;
             }
 
-            var v = (TimeSpan)value;
+            var v = (TimeSpan) value;
 
             return System.Convert.ToInt64(Math.Round(v.TotalMilliseconds));
         }

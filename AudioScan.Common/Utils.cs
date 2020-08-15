@@ -14,8 +14,8 @@ namespace AudioScan.Common
             bytes.Aggregate(sb,
                 (s, c) =>
                 {
-                    s.Append(c.ToString("X2")); return s;
-
+                    s.Append(c.ToString("X2"));
+                    return s;
                 });
 
             return "0x" + sb.ToString();
@@ -27,6 +27,7 @@ namespace AudioScan.Common
             {
                 return null;
             }
+
             var s = bytes.Trim();
 
             s = s.StartsWith("0x") ? s.Substring(2) : s;
@@ -41,7 +42,8 @@ namespace AudioScan.Common
             for (int i = 0; i < s2; i++)
             {
                 byte b = 0;
-                b = byte.Parse(string.Format("{0}{1}", s[i * 2], s[i * 2 + 1]), System.Globalization.NumberStyles.HexNumber);
+                b = byte.Parse(string.Format("{0}{1}", s[i * 2], s[i * 2 + 1]),
+                    System.Globalization.NumberStyles.HexNumber);
 
                 result.Add(b);
             }

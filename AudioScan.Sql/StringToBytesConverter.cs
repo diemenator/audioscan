@@ -5,9 +5,9 @@ namespace AudioScan.Sql
 {
     public class StringToBytesConverter : IDbValueConverter
     {
-        public Type SourceType => typeof (string);
+        public Type SourceType => typeof(string);
 
-        public Type TargetType => typeof (byte[]);
+        public Type TargetType => typeof(byte[]);
 
         public object Convert(object value)
         {

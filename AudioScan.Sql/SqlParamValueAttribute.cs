@@ -8,11 +8,12 @@ namespace AudioScan.Sql
     [AttributeUsage(AttributeTargets.Property)]
     public class SqlParamValueAttribute : Attribute
     {
-        private static readonly Dictionary<Type,IDbValueConverter> Converters = new Dictionary<Type, IDbValueConverter>()
-        {
-            {typeof(StringToBytesConverter), new StringToBytesConverter() },
-            {typeof(TimespanToMillisConverter), new TimespanToMillisConverter() }
-        };
+        private static readonly Dictionary<Type, IDbValueConverter> Converters =
+            new Dictionary<Type, IDbValueConverter>()
+            {
+                {typeof(StringToBytesConverter), new StringToBytesConverter()},
+                {typeof(TimespanToMillisConverter), new TimespanToMillisConverter()}
+            };
 
         public SqlParamValueAttribute(Type converterType = null, string name = null)
         {
@@ -33,7 +34,7 @@ namespace AudioScan.Sql
 
         public void AddWithValue(SqlParameterCollection targetCollection, PropertyInfo property, object instance)
         {
-            var n = Name ?? ("@"+property.Name);
+            var n = Name ?? ("@" + property.Name);
 
             var value = property.GetValue(instance);
 
@@ -46,7 +47,7 @@ namespace AudioScan.Sql
             {
                 value = DBNull.Value;
             }
-            
+
             targetCollection.AddWithValue(n, value);
         }
     }

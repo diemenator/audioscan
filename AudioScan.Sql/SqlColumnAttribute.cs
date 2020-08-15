@@ -10,11 +10,12 @@ namespace AudioScan.Sql
     [AttributeUsage(AttributeTargets.Property)]
     public class SqlColumnAttribute : Attribute
     {
-        private static readonly Dictionary<Type, IDbValueConverter> Converters = new Dictionary<Type, IDbValueConverter>()
-        {
-            {typeof(BytesToToStringConverter), new BytesToToStringConverter() },
-            {typeof(MillisToTimespanConverter), new MillisToTimespanConverter() }
-        };
+        private static readonly Dictionary<Type, IDbValueConverter> Converters =
+            new Dictionary<Type, IDbValueConverter>()
+            {
+                {typeof(BytesToToStringConverter), new BytesToToStringConverter()},
+                {typeof(MillisToTimespanConverter), new MillisToTimespanConverter()}
+            };
 
         public SqlColumnAttribute(Type converterType = null, string name = null)
         {
@@ -26,7 +27,7 @@ namespace AudioScan.Sql
                 Converter = Converters[ConverterType];
             }
         }
-         
+
         public IDbValueConverter Converter { get; private set; }
 
         public string Name { get; private set; }
@@ -45,7 +46,7 @@ namespace AudioScan.Sql
             }
 
             var hackTheTypesystem =
-                typeof (SqlColumnAttribute).GetMethod("BindOrdinal")
+                typeof(SqlColumnAttribute).GetMethod("BindOrdinal")
                     .GetGenericMethodDefinition()
                     .MakeGenericMethod(sourceType);
 
@@ -57,9 +58,10 @@ namespace AudioScan.Sql
                 {
                     return false;
                 }
+
                 try
                 {
-                    var value = hackTheTypesystem.Invoke(this, new object[] { ordinal, source });
+                    var value = hackTheTypesystem.Invoke(this, new object[] {ordinal, source});
 
                     if (Converter != null)
                     {
@@ -73,7 +75,7 @@ namespace AudioScan.Sql
 
                     if (value is DateTime)
                     {
-                        value = ((DateTime)value).ToUniversalTime();
+                        value = ((DateTime) value).ToUniversalTime();
                     }
 
                     propertyInfo.SetValue(target, value);

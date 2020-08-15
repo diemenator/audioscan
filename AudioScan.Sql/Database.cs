@@ -17,20 +17,20 @@ namespace AudioScan.Sql
         {
             var mappers =
                 typeof(T)
-                .GetProperties()
-                .SelectMany(property =>
-                    property.GetCustomAttributes()
-                    .OfType<SqlParamValueAttribute>()
-                    .Select(attr =>
-                    {
-                        void it(object src, SqlParameterCollection sqlp)
-                        {
-                            attr.AddWithValue(sqlp, property, src);
-                        }
+                    .GetProperties()
+                    .SelectMany(property =>
+                        property.GetCustomAttributes()
+                            .OfType<SqlParamValueAttribute>()
+                            .Select(attr =>
+                            {
+                                void it(object src, SqlParameterCollection sqlp)
+                                {
+                                    attr.AddWithValue(sqlp, property, src);
+                                }
 
-                        return (Action<object, SqlParameterCollection>)it;
-                    })
-                );
+                                return (Action<object, SqlParameterCollection>) it;
+                            })
+                    );
 
             return (source, target) =>
             {
@@ -43,14 +43,14 @@ namespace AudioScan.Sql
 
         public static Action<SqlDataReader, T> Reader<T>()
         {
-            var mappers = 
+            var mappers =
                 typeof(T)
-                .GetProperties()
-                .SelectMany(property =>
-                    property
-                    .GetCustomAttributes().OfType<SqlColumnAttribute>()
-                    .Select(attr => attr.Binder(property))
-                );
+                    .GetProperties()
+                    .SelectMany(property =>
+                        property
+                            .GetCustomAttributes().OfType<SqlColumnAttribute>()
+                            .Select(attr => attr.Binder(property))
+                    );
 
             return (SqlDataReader source, T target) =>
             {

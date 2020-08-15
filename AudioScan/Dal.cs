@@ -14,8 +14,13 @@ namespace AudioScan
     public static class Dal
     {
         private static readonly ILogger Log = Settings.logger.Invoke("Dal");
-        private static readonly Action<GetDirInfo, SqlParameterCollection> GetDirInfoCmd = Database.Mapper<GetDirInfo>();
-        private static readonly Action<AudioTrack, SqlParameterCollection> AudioTrackCmd = Database.Mapper<AudioTrack>();
+
+        private static readonly Action<GetDirInfo, SqlParameterCollection>
+            GetDirInfoCmd = Database.Mapper<GetDirInfo>();
+
+        private static readonly Action<AudioTrack, SqlParameterCollection>
+            AudioTrackCmd = Database.Mapper<AudioTrack>();
+
         private static readonly Action<SqlDataReader, AudioTrack> ReadAudioTrack = Database.Reader<AudioTrack>();
         private static readonly Action<SqlDataReader, DirInfo> ReadDirInfo = Database.Reader<DirInfo>();
 
@@ -27,12 +32,13 @@ namespace AudioScan
                 Log.Trace($"Connecting to {str}...");
             }
 
-            var it = new SqlConnection(str);            
+            var it = new SqlConnection(str);
             await it.OpenAsync().ConfigureAwait(false);
             return it;
         }
 
-        public static async Task<List<T>> Read<T>(SqlDataReader source, Action<SqlDataReader, T> reader, CancellationToken token) where T:new()
+        public static async Task<List<T>> Read<T>(SqlDataReader source, Action<SqlDataReader, T> reader,
+            CancellationToken token) where T : new()
         {
             var it = new List<T>();
             if (source.HasRows)
@@ -57,7 +63,7 @@ namespace AudioScan
                 {
                     var cmd = connection.CreateCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "dbo.update_track";                    
+                    cmd.CommandText = "dbo.update_track";
                     AudioTrackCmd(target, cmd.Parameters);
 
                     using var reader = await cmd.ExecuteReaderAsync(token).ConfigureAwait(false);
@@ -70,7 +76,7 @@ namespace AudioScan
 
                 return null;
             }
-        } 
+        }
 
         public static async Task<DirInfo> GetDirInfo(this string directoryName, CancellationToken token)
         {
