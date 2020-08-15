@@ -1,6 +1,6 @@
-leetcode solutions
+// leetcode solutions
 
-https://leetcode.com/problems/power-of-three/
+// https://leetcode.com/problems/power-of-three/
 
 public class Solution {
     public bool IsPowerOfThree(int n) {        
@@ -13,12 +13,12 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/contains-duplicate/
-
-Given an array of integers, find if the array contains any duplicates.
-
-Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
-
+// https://leetcode.com/problems/contains-duplicate/
+// 
+// Given an array of integers, find if the array contains any duplicates.
+// 
+// Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+// 
 public class Solution {
     public bool ContainsDuplicate(int[] nums) {
         var dups = new HashSet<int>();        
@@ -32,10 +32,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/intersection-of-two-arrays-ii/
-
-Given two arrays, write a function to compute their intersection.
-
+// https://leetcode.com/problems/intersection-of-two-arrays-ii/
+// 
+// Given two arrays, write a function to compute their intersection.
+// 
 public class Solution {
     public int[] Intersect(int[] nums1, int[] nums2) {
         var small = nums1;
@@ -70,14 +70,14 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/plus-one/
-
-Given a non-empty array of digits representing a non-negative integer, increment one to the integer.
-
-The digits are stored such that the most significant digit is at the head of the list, and each element in the array contains a single digit.
-
-You may assume the integer does not contain any leading zero, except the number 0 itself.
-
+// https://leetcode.com/problems/plus-one/
+// 
+// Given a non-empty array of digits representing a non-negative integer, increment one to the integer.
+// 
+// The digits are stored such that the most significant digit is at the head of the list, and each element in the array contains a single digit.
+// 
+// You may assume the integer does not contain any leading zero, except the number 0 itself.
+// 
 
 public class Solution {
     public int[] PlusOne(int[] digits) {
@@ -108,10 +108,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/move-zeroes/
-
-Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
-
+// https://leetcode.com/problems/move-zeroes/
+// 
+// Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+// 
 public class Solution {
     
     public void MoveZeroes(int[] nums) {
@@ -147,12 +147,12 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/two-sum/
-
-Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
+// https://leetcode.com/problems/two-sum/
+// 
+// Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+// 
+// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+// 
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
         var map = new Dictionary<int,int>();
@@ -173,14 +173,14 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/rotate-array/
-
-Given an array, rotate the array to the right by k steps, where k is non-negative.
-
-Follow up:
-
-Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
-Could you do it in-place with O(1) extra space?
+// https://leetcode.com/problems/rotate-array/
+// 
+// Given an array, rotate the array to the right by k steps, where k is non-negative.
+// 
+// Follow up:
+// 
+// Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
+// Could you do it in-place with O(1) extra space?
 
 public class Solution {
     // takes i'th element and writes it to a rotated position
@@ -210,12 +210,12 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/remove-duplicates-from-sorted-array/
-
-Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
-
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+// 
+// Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+// 
+// Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+// 
 public class Solution {
     public int RemoveDuplicates(int[] nums) {
         if (nums.Length < 2) {
@@ -244,12 +244,12 @@ public class Solution {
 }
 
 
-https://leetcode.com/problems/linked-list-cycle/
-
-Given a linked list, determine if it has a cycle in it.
-
-To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.
-
+// https://leetcode.com/problems/linked-list-cycle/
+// 
+// Given a linked list, determine if it has a cycle in it.
+// 
+// To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.
+// 
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -294,10 +294,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/palindrome-linked-list/
-
-Given a singly linked list, determine if it is a palindrome.
-
+// https://leetcode.com/problems/palindrome-linked-list/
+// 
+// Given a singly linked list, determine if it is a palindrome.
+// 
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -363,10 +363,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/merge-two-sorted-lists/
-
-Merge two sorted linked lists and return it as a new sorted list. The new list should be made by splicing together the nodes of the first two lists.
-
+// https://leetcode.com/problems/merge-two-sorted-lists/
+// 
+// Merge two sorted linked lists and return it as a new sorted list. The new list should be made by splicing together the nodes of the first two lists.
+// 
 
 /**
  * Definition for singly-linked list.
@@ -427,9 +427,9 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/reverse-linked-list/
-
-Reverse a singly linked list.
+// https://leetcode.com/problems/reverse-linked-list/
+// 
+// Reverse a singly linked list.
 
 /**
  * Definition for singly-linked list.
@@ -457,10 +457,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-
-Given a linked list, remove the n-th node from the end of list and return its head.
-
+// https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+// 
+// Given a linked list, remove the n-th node from the end of list and return its head.
+// 
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -501,10 +501,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/delete-node-in-a-linked-list/
-
-Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
-
+// https://leetcode.com/problems/delete-node-in-a-linked-list/
+// 
+// Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
+// 
 
 
 /**
@@ -522,13 +522,13 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/longest-common-prefix/
-
-Write a function to find the longest common prefix string amongst an array of strings.
-
-If there is no common prefix, return an empty string "".
-
-
+// https://leetcode.com/problems/longest-common-prefix/
+// 
+// Write a function to find the longest common prefix string amongst an array of strings.
+// 
+// If there is no common prefix, return an empty string "".
+// 
+// 
 public class Solution {
     public string LongestCommonPrefix(string[] strs) {
         if (strs.Length == 1) {
@@ -565,26 +565,26 @@ public class Solution {
         return strs[0].Substring(0, prefixLength);        
     }
 }
-
-https://leetcode.com/problems/count-and-say/
-
-The count-and-say sequence is the sequence of integers with the first five terms as following:
-
-1.     1
-2.     11
-3.     21
-4.     1211
-5.     111221
-1 is read off as "one 1" or 11.
-11 is read off as "two 1s" or 21.
-21 is read off as "one 2, then one 1" or 1211.
-
-Given an integer n where 1 ≤ n ≤ 30, generate the nth term of the count-and-say sequence. You can do so recursively, in other words from the previous member read off the digits, counting the number of digits in groups of the same digit.
-
-Note: Each term of the sequence of integers will be represented as a string.
- 
-
-
+// 
+// https://leetcode.com/problems/count-and-say/
+// 
+// The count-and-say sequence is the sequence of integers with the first five terms as following:
+// 
+// 1.     1
+// 2.     11
+// 3.     21
+// 4.     1211
+// 5.     111221
+// 1 is read off as "one 1" or 11.
+// 11 is read off as "two 1s" or 21.
+// 21 is read off as "one 2, then one 1" or 1211.
+// 
+// Given an integer n where 1 ≤ n ≤ 30, generate the nth term of the count-and-say sequence. You can do so recursively, in other words from the previous member read off the digits, counting the number of digits in groups of the same digit.
+// 
+// Note: Each term of the sequence of integers will be represented as a string.
+//  
+// 
+// 
 public class Solution {
     private string Say(string s) {
         var count = 1;
@@ -622,12 +622,12 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/implement-strstr/
-
-Implement strStr().
-
-Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
-
+// https://leetcode.com/problems/implement-strstr/
+// 
+// Implement strStr().
+// 
+// Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+// 
 public class Solution {
     public int StrStr(string haystack, string needle) {        
         if (needle.Length == 0){
@@ -655,18 +655,18 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/string-to-integer-atoi/
-
-Implement atoi which converts a string to an integer.
-
-The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
-
-The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.
-
-If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.
-
-If no valid conversion could be performed, a zero value is returned.
-
+// https://leetcode.com/problems/string-to-integer-atoi/
+// 
+// Implement atoi which converts a string to an integer.
+// 
+// The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
+// 
+// The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.
+// 
+// If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.
+// 
+// If no valid conversion could be performed, a zero value is returned.
+// 
 public class Solution {
     public int MyAtoi(string str) {
         var result = 0L;
@@ -721,10 +721,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/valid-palindrome/
-
-Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
-
+// https://leetcode.com/problems/valid-palindrome/
+// 
+// Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+// 
 public class Solution {
     public bool IsPalindrome(string s) {
         var sanitized = 
@@ -743,11 +743,11 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/valid-anagram/
-
-Given two strings s and t , write a function to determine if t is an anagram of s.
-
-
+// https://leetcode.com/problems/valid-anagram/
+// 
+// Given two strings s and t , write a function to determine if t is an anagram of s.
+// 
+// 
 public class Solution {
     public bool IsAnagram(string s, string t) {
         var nums = new int[26];
@@ -769,10 +769,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/first-unique-character-in-a-string/
-
-Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1.
-
+// https://leetcode.com/problems/first-unique-character-in-a-string/
+// 
+// Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1.
+// 
 public class Solution {
     public int FirstUniqChar(string s) {        
         var nums = new int[26];
@@ -797,10 +797,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/reverse-integer/
-
-Given a 32-bit signed integer, reverse digits of an integer.
-
+// https://leetcode.com/problems/reverse-integer/
+// 
+// Given a 32-bit signed integer, reverse digits of an integer.
+// 
 public class Solution {
     public int Reverse(int x) {        
         var isNegative = x < 0;
@@ -826,15 +826,15 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/reverse-string/
-
-Write a function that reverses a string. The input string is given as an array of characters char[].
-
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-
-You may assume all the characters consist of printable ascii characters.
-
- 
+// https://leetcode.com/problems/reverse-string/
+// 
+// Write a function that reverses a string. The input string is given as an array of characters char[].
+// 
+// Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+// 
+// You may assume all the characters consist of printable ascii characters.
+// 
+//  
 
 public class Solution {
     public void ReverseString(char[] s) {
@@ -850,17 +850,17 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/rotate-image/
-
-You are given an n x n 2D matrix representing an image.
-
-Rotate the image by 90 degrees (clockwise).
-
-Note:
-
-You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
-
-
+// https://leetcode.com/problems/rotate-image/
+// 
+// You are given an n x n 2D matrix representing an image.
+// 
+// Rotate the image by 90 degrees (clockwise).
+// 
+// Note:
+// 
+// You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+// 
+// 
 
 public class Solution {
     public void Rotate(int[][] matrix) {
@@ -882,16 +882,16 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/valid-sudoku/
-
-Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
-
-Each row must contain the digits 1-9 without repetition.
-Each column must contain the digits 1-9 without repetition.
-Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
-
-The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
-
+// https://leetcode.com/problems/valid-sudoku/
+// 
+// Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+// 
+// Each row must contain the digits 1-9 without repetition.
+// Each column must contain the digits 1-9 without repetition.
+// Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+// 
+// The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
+// 
 
 public class Solution {
     public bool IsValidSudoku(char[][] board) {
@@ -942,12 +942,12 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/maximum-depth-of-binary-tree/
-
-Given a binary tree, find its maximum depth.
-
-The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
-
+// https://leetcode.com/problems/maximum-depth-of-binary-tree/
+// 
+// Given a binary tree, find its maximum depth.
+// 
+// The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+// 
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -977,10 +977,10 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/symmetric-tree/
-
-Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
-
+// https://leetcode.com/problems/symmetric-tree/
+// 
+// Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+// 
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -1019,12 +1019,12 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
-
-Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
-
-For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
-
+// https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+// 
+// Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+// 
+// For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+// 
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -1064,14 +1064,14 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/first-bad-version/
-
-You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
-
-Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
-
-You are given an API bool isBadVersion(version) which will return whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
-
+// https://leetcode.com/problems/first-bad-version/
+// 
+// You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+// 
+// Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
+// 
+// You are given an API bool isBadVersion(version) which will return whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
+// 
 
 /* The isBadVersion API is defined in the parent class VersionControl.
       bool IsBadVersion(int version); */
@@ -1115,13 +1115,13 @@ public class Solution : VersionControl {
     }
 }
 
-https://leetcode.com/problems/climbing-stairs/
-
-You are climbing a stair case. It takes n steps to reach to the top.
-
-Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-
-
+// https://leetcode.com/problems/climbing-stairs/
+// 
+// You are climbing a stair case. It takes n steps to reach to the top.
+// 
+// Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+// 
+// 
 
 public class Solution {
     public int ClimbStairs(int n) {
@@ -1147,15 +1147,15 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-
-Say you have an array for which the ith element is the price of a given stock on day i.
-
-If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
-
-Note that you cannot sell a stock before you buy one.
-
-
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+// 
+// Say you have an array for which the ith element is the price of a given stock on day i.
+// 
+// If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+// 
+// Note that you cannot sell a stock before you buy one.
+// 
+// 
 
 public class Solution {
     public int MaxProfit(int[] prices) {        
@@ -1177,16 +1177,16 @@ public class Solution {
     }
 }
 
-https://leetcode.com/problems/min-stack/
-
-Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
-
-push(x) -- Push element x onto stack.
-pop() -- Removes the element on top of the stack.
-top() -- Get the top element.
-getMin() -- Retrieve the minimum element in the stack.
-
-
+// https://leetcode.com/problems/min-stack/
+// 
+// Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+// 
+// push(x) -- Push element x onto stack.
+// pop() -- Removes the element on top of the stack.
+// top() -- Get the top element.
+// getMin() -- Retrieve the minimum element in the stack.
+// 
+// 
 
 public class MinStack {
     private List<int> data = new List<int>();
@@ -1238,28 +1238,28 @@ public class MinStack {
  */
  
  
-https://leetcode.com/problems/roman-to-integer/
- 
-Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-
-Symbol       Value
-I             1
-V             5
-X             10
-L             50
-C             100
-D             500
-M             1000
-For example, two is written as II in Roman numeral, just two one's added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
-
-Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
-
-I can be placed before V (5) and X (10) to make 4 and 9. 
-X can be placed before L (50) and C (100) to make 40 and 90. 
-C can be placed before D (500) and M (1000) to make 400 and 900.
- 
-Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.
- 
+// https://leetcode.com/problems/roman-to-integer/
+//  
+// Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+// 
+// Symbol       Value
+// I             1
+// V             5
+// X             10
+// L             50
+// C             100
+// D             500
+// M             1000
+// For example, two is written as II in Roman numeral, just two one's added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
+// 
+// Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+// 
+// I can be placed before V (5) and X (10) to make 4 and 9. 
+// X can be placed before L (50) and C (100) to make 40 and 90. 
+// C can be placed before D (500) and M (1000) to make 400 and 900.
+//  
+// Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.
+//  
  
  
  public class Solution {
@@ -1302,9 +1302,9 @@ Given a roman numeral, convert it to an integer. Input is guaranteed to be withi
     }
 }
 
-https://leetcode.com/problems/power-of-three/
-
-Given an integer, write a function to determine if it is a power of three.
+// https://leetcode.com/problems/power-of-three/
+// 
+// Given an integer, write a function to determine if it is a power of three.
 
 public class Solution {
     public bool IsPowerOfThree(int n) {        
